@@ -1,6 +1,11 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			personasLista: [], //peopleList
+			planetasLista: [], //planetsList
+			vehiculosLista: [] //vehiclesList
+
+			/*Codigo de ejemplo de Store
 			demo: [
 				{
 					title: "FIRST",
@@ -12,9 +17,53 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			]*/ //HastaAqui
 		},
 		actions: {
+			fetchPersonas: () => {
+				const URL = "https://swapi.dev/api/people";
+				const OBJCONFIG = {
+					method: "GET",
+					headers: {
+						"Content-type": "aplication/json"
+					}
+				};
+
+				fetch(URL, OBJCONFIG)
+					.then(res => res.json()) //Texto plano
+					.then(data => setStore({ personasLista: data.results })); //Obtienes los datos
+			},
+			fetchPlanetas: () => {
+				const URL = "https://swapi.dev/api/planets/";
+				const OBJCONFIG = {
+					method: "GET",
+					headers: {
+						"Content-type": "aplication/json"
+					}
+				};
+
+				fetch(URL, OBJCONFIG)
+					.then(res => res.json()) //Texto plano
+					.then(data => setStore({ planetasLista: data.results })); //Obtienes los datos
+			},
+			fetchVehiculos: () => {
+				const URL = "https://swapi.dev/api/vehicles/";
+				const OBJCONFIG = {
+					method: "GET",
+					headers: {
+						"Content-type": "aplication/json"
+					}
+				};
+
+				fetch(URL, OBJCONFIG)
+					.then(res => res.json()) //Texto plano
+					.then(data => setStore({ vehiculosLista: data.results })); //Obtienes los datos
+			},
+			/*
+			
+			A partir de aqui es codigo que trae por defecto de practica
+			
+			*/
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
