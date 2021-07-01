@@ -10,6 +10,11 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
+//Mis importanciones
+import { Personajes } from "./views/personajes";
+import { Vehiculos } from "./views/vehiculos";
+import { Planetas } from "./views/planetas";
+
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -31,6 +36,16 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
+						<Route exact path="/personajes">
+							<Personajes />
+						</Route>
+						<Route exact path="/vehiculos">
+							<Vehiculos />
+						</Route>
+						<Route exact path="/planetas">
+							<Planetas />
+						</Route>
+
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

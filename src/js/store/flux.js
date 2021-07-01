@@ -43,3 +43,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
+
+/*
+Flux
+fetchplanetas ()=< profe
+
+
+
+
+
+TYO:
+planetasList: [
+
+]
+
+
+carpeta palnetas.js
+import {Context} from "../store/appcontext
+
+const {store, action} = useContext(Context);
+
+
+
+borrar useEffect listadoPlanetas();
+en vez de eso agregamos ya lo que seria Action.
+fetchplanetas ()=} asi:
+useEffect ()
+fechtplanetas
+
+store-pplanetalist se coloca en el map que esta dentro del return
+
+*/
