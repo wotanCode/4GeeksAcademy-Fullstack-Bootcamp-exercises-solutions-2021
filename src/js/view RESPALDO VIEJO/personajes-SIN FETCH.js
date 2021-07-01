@@ -1,12 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+/*
+import React, { useState, useEffect } from "react";
 import { Card } from "../component/Card";
-import { Context } from "../store/appContext"; //traermos el  contexto
 
 export const Personajes = () => {
-	//const [dataPersonajes, setDataPersonajes] = useState([]);
-	const { store, actions } = useContext(Context);
+	const [dataPersonajes, setDataPersonajes] = useState([]);
 
-	/*
 	const listadoPersonajes = () => {
 		fetch("https://swapi.dev/api/people/?page=2", {
 			method: "GET"
@@ -14,34 +12,17 @@ export const Personajes = () => {
 			.then(response => response.json())
 			.then(data => setDataPersonajes(data.results));
 	};
-	*/
 
 	useEffect(() => {
-		actions.fetchPersonas();
-		//listadoPersonajes(); metodo sin flux
+		listadoPersonajes();
 	}, []);
 
-	/*
-	const labels = [
-		{
-			label: "titulo",
-			valor: "valor"
-		},
-		{
-			label: "titulo",
-			valor: "valor"
-		}
-    ];
-    */
-
+/*
 	return (
 		<div className="container">
 			<h1 className="my-5 text-white">Personajes</h1>
 			<div className="row flex-row flex-nowrap overflow-auto">
-				{store.personasLista.map((item, index) => {
-					{
-						/*dataPersonajes.map((item, index) => {*/
-					}
+				{dataPersonajes.map((item, index) => {
 					return (
 						<Card
 							key={index}
@@ -56,3 +37,17 @@ export const Personajes = () => {
 		</div>
 	);
 };
+
+*/
+
+/* NO DESCOMENTAR ESTO
+	const labels = [
+		{
+			label: "titulo",
+			valor: "valor"
+		},
+		{
+			label: "titulo",
+			valor: "valor"
+		}
+    ]; HASTA AQUI*/
