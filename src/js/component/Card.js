@@ -1,24 +1,11 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext"; //traermos el  contexto
+//import { Card } from "../component/Card";
 import PropTypes from "prop-types";
 
 //mx-3" style={{ width: "18rem" }}>
 export const Card = props => {
-	Card.propTypes = {
-		//general
-		title: PropTypes.string,
-		//personajes
-		gender: PropTypes.string,
-		hair: PropTypes.string,
-		eyes: PropTypes.string,
-		//planetas
-		climate: PropTypes.string,
-		gravity: PropTypes.string,
-		terrain: PropTypes.string,
-		//vehiculos
-		model: PropTypes.string,
-		consumables: PropTypes.string,
-		vehicle_class: PropTypes.string
-	};
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="col-3">
 			<div className="card">
@@ -40,11 +27,27 @@ export const Card = props => {
 						<p>{props.consumables}</p>
 						<p>{props.vehicle_class}</p>
 					</p>
-					<a href="#" className="btn btn-warning">
+					<a onClick={() => actions.setFavoritos(props.title)} href="#" className="btn btn-warning">
 						fav
 					</a>
 				</div>
 			</div>
 		</div>
 	);
+};
+Card.propTypes = {
+	//general
+	title: PropTypes.string,
+	//personajes
+	gender: PropTypes.string,
+	hair: PropTypes.string,
+	eyes: PropTypes.string,
+	//planetas
+	climate: PropTypes.string,
+	gravity: PropTypes.string,
+	terrain: PropTypes.string,
+	//vehiculos
+	model: PropTypes.string,
+	consumables: PropTypes.string,
+	vehicle_class: PropTypes.string
 };
