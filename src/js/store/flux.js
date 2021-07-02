@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			personasLista: [], //peopleList
 			planetasLista: [], //planetsList
-			vehiculosLista: [] //vehiclesList
+			vehiculosLista: [], //vehiclesList
+			favoritosLista: []
 
 			/*Codigo de ejemplo de Store
 			demo: [
@@ -20,6 +21,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]*/ //HastaAqui
 		},
 		actions: {
+			//ACCION para favoritos
+			setFavoritos: tituloFav => {
+				const store = getStore();
+				setStore({ favoritosLista: [...store.favoritosLista, tituloFav] });
+			},
+
+			//Acciones para traer las APIS el contenido de llas API
 			fetchPersonas: () => {
 				const URL = "https://swapi.dev/api/people";
 				const OBJCONFIG = {
