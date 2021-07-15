@@ -39,17 +39,33 @@ export const Personajes = () => {
 			<h1 className="my-5 text-white">Personajes</h1>
 			<div className="row flex-row flex-nowrap overflow-auto">
 				{store.personasLista.map((item, index) => {
-					{
-						/*dataPersonajes.map((item, index) => {*/
-					}
+					const dataPerson = [
+						{
+							label: "Gender",
+							value: item.gender
+						},
+						{
+							label: "Hair",
+							value: item.hair_color
+						},
+						{
+							label: "Eyes",
+							value: item.eye_color
+						}
+					];
+
 					return (
 						<Card
 							key={index}
 							title={item.name}
 							imagen="http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg"
+							contenido={dataPerson}
+
+							/* metodo anterior
 							gender={item.gender}
 							hair={item.hair_color}
 							eyes={item.eye_color}
+							*/
 						/>
 					);
 				})}

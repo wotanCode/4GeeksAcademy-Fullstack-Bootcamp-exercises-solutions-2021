@@ -25,17 +25,31 @@ export const Vehiculos = () => {
 			<h1 className="my-5 text-white">Vehiculos</h1>
 			<div className="row flex-row flex-nowrap overflow-auto">
 				{store.vehiculosLista.map((item, index) => {
-					{
-						/*dataVehiculos.map((item, index) => {   */
-					}
+					const dataVehiculos = [
+						{
+							label: "Model",
+							value: item.model
+						},
+						{
+							label: "Consumable",
+							value: item.consumables
+						},
+						{
+							label: "Vehicle Class",
+							value: item.vehicle_class
+						}
+					];
 					return (
 						<Card
 							key={index}
 							title={item.name}
 							imagen="http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg"
+							contenido={dataVehiculos}
+							/* metodo anterior con protypes
 							model={item.model}
 							consumables={item.consumables}
 							vehicle_class={item.vehicle_class}
+							*/
 						/>
 					);
 				})}
