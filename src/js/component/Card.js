@@ -18,6 +18,15 @@ export const Card = props => {
 					<h5 className="card-title">{props.title}</h5>
 					<p className="card-text">
 						<img src={props.imagen} className="card-img-top" />
+						{props.contenido.map((item, index) => {
+							return (
+								<p key={index}>
+									{item.label}: {item.value}
+								</p>
+							);
+						})}
+
+						{/*estado anterior sin los labels
 						<p>{props.gender}</p>
 						<p>{props.hair}</p>
 						<p>{props.eyes}</p>
@@ -27,6 +36,7 @@ export const Card = props => {
 						<p>{props.model}</p>
 						<p>{props.consumables}</p>
 						<p>{props.vehicle_class}</p>
+*/}
 					</p>
 					<a onClick={() => actions.setFavoritos(props.title)} href="#" className="btn btn-warning">
 						fav
@@ -40,6 +50,10 @@ Card.propTypes = {
 	//general
 	title: PropTypes.string,
 	imagen: PropTypes.string,
+	contenido: PropTypes.array
+
+	/* Anteriormente era de esta manera debido a que necesitaba solo mostraba la informacion
+	sin embargo ahora que añadi un label que cambia de acuerdo a lo necesitado no hace falta declarar todos estos
 	//personajes
 	gender: PropTypes.string,
 	hair: PropTypes.string,
@@ -52,4 +66,5 @@ Card.propTypes = {
 	model: PropTypes.string,
 	consumables: PropTypes.string,
 	vehicle_class: PropTypes.string
+	*/
 };
