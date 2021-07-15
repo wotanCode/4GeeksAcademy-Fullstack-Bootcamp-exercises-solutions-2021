@@ -29,13 +29,13 @@ export const Navbar = () => {
     </Link>*/}
 
 				<Link to="/personajes">
-					<button className="btn btn-primary">Personajes</button>
+					<button className="btn btn-secondary">Personajes</button>
 				</Link>
 				<Link to="/vehiculos">
-					<button className="btn btn-primary">Vehiculos</button>
+					<button className="btn btn-secondary">Vehiculos</button>
 				</Link>
 				<Link to="/planetas">
-					<button className="btn btn-primary">Planetas</button>
+					<button className="btn btn-secondary">Planetas</button>
 				</Link>
 
 				<span className="dropdown">

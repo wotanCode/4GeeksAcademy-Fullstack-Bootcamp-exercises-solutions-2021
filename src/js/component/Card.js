@@ -17,6 +17,7 @@ export const Card = props => {
 				<div className="card-body">
 					<h5 className="card-title">{props.title}</h5>
 					<p className="card-text">
+						<img src={props.imagen} className="card-img-top" />
 						<p>{props.gender}</p>
 						<p>{props.hair}</p>
 						<p>{props.eyes}</p>
@@ -38,6 +39,7 @@ export const Card = props => {
 Card.propTypes = {
 	//general
 	title: PropTypes.string,
+	imagen: PropTypes.string,
 	//personajes
 	gender: PropTypes.string,
 	hair: PropTypes.string,

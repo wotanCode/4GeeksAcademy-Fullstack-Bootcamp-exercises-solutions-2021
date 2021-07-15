@@ -40,6 +40,7 @@ export const Planetas = () => {
 						<Card
 							key={index}
 							title={item.name}
+							imagen="http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg"
 							//contenido={dataplanet}
 							climate={item.climate}
 							gravity={item.gravity}

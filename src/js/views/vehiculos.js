@@ -32,6 +32,7 @@ export const Vehiculos = () => {
 						<Card
 							key={index}
 							title={item.name}
+							imagen="http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg"
 							model={item.model}
 							consumables={item.consumables}
 							vehicle_class={item.vehicle_class}
