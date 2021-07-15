@@ -26,6 +26,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				setStore({ favoritosLista: [...store.favoritosLista, tituloFav] });
 			},
+			setEliminarFavoritos: titulofav => {
+				setStore({ favoritosLista: getStore().favoritosLista.filter(favoritos => favoritos !== titulofav) });
+			},
 
 			//Acciones para traer las APIS el contenido de llas API
 			fetchPersonas: () => {

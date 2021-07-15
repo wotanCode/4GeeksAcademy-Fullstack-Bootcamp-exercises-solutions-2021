@@ -2,7 +2,21 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext"; //traermos el  contexto
 
+//La lista de downDrop
+
 export const Navbar = () => {
+	const [listaFav, setListaFav] = useState([]);
+	//Funcion para elimminar elementos del arreglo
+	/*
+	function eliminar(index) {
+		if (index > -1) {
+			const filterList = listaFav.filter(
+				item => item !== listaTareas[index]
+			);
+			setListaFav(filterList);
+		}
+	}*/
+
 	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
@@ -24,7 +38,7 @@ export const Navbar = () => {
 					<button className="btn btn-primary">Planetas</button>
 				</Link>
 
-				<div className="dropdown">
+				<span className="dropdown">
 					<button
 						className="btn btn-secondary dropdown-toggle"
 						type="button"
@@ -37,13 +51,22 @@ export const Navbar = () => {
 					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						{store.favoritosLista.map((item, index) => {
 							return (
+								//Estos son los elementos que se muestran en el dropdown
 								<a key={index} className="dropdown-item" href="#">
-									{item}
+									<span>{item}</span>
+									{/*El boton para eliminar elementos*/}
+									<button
+										className=""
+										onClick={() => {
+											actions.setEliminarFavoritos(item);
+										}}>
+										<span>X</span>
+									</button>
 								</a>
 							);
 						})}
 					</div>
-				</div>
+				</span>
 			</div>
 		</nav>
 	);
