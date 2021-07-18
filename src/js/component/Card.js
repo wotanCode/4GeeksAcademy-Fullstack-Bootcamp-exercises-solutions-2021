@@ -38,7 +38,13 @@ export const Card = props => {
 						<p>{props.vehicle_class}</p>
 */}
 					</p>
-					<a onClick={() => actions.setFavoritos(props.title)} href="#" className="btn btn-warning">
+					<a href="#" className="btn btn-primary">
+						Learn More!
+					</a>
+					<a
+						onClick={() => actions.setFavoritos(props.title)}
+						href="#"
+						className="btn btn-warning float-right">
 						fav
 					</a>
 				</div>

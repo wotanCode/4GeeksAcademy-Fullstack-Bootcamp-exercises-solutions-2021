@@ -28,19 +28,9 @@ export const Navbar = () => {
 					<button className="btn btn-primary">Check the Context in action</button>
     </Link>*/}
 
-				<Link to="/personajes">
-					<button className="btn btn-secondary">Personajes</button>
-				</Link>
-				<Link to="/vehiculos">
-					<button className="btn btn-secondary">Vehiculos</button>
-				</Link>
-				<Link to="/planetas">
-					<button className="btn btn-secondary">Planetas</button>
-				</Link>
-
 				<span className="dropdown">
 					<button
-						className="btn btn-secondary dropdown-toggle"
+						className="btn btn-secondary dropdown-toggle mx-2"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
@@ -67,6 +57,16 @@ export const Navbar = () => {
 						})}
 					</div>
 				</span>
+
+				<Link to="/personajes">
+					<button className="btn btn-secondary mx-2">Personajes</button>
+				</Link>
+				<Link to="/vehiculos">
+					<button className="btn btn-secondary mx-2">Vehiculos</button>
+				</Link>
+				<Link to="/planetas">
+					<button className="btn btn-secondary mx-2">Planetas</button>
+				</Link>
 			</div>
 		</nav>
 	);
