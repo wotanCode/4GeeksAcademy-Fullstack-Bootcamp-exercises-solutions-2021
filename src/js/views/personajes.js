@@ -60,7 +60,8 @@ export const Personajes = () => {
 							title={item.name}
 							imagen="http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg"
 							contenido={dataPerson}
-
+							categoria="/personajes/"
+							id={index}
 							/* metodo anterior
 							gender={item.gender}
 							hair={item.hair_color}

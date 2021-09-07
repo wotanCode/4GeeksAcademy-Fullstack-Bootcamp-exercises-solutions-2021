@@ -44,6 +44,9 @@ export const Planetas = () => {
 							title={item.name}
 							imagen="http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg"
 							contenido={dataPlanets}
+							categoria="/planetas/"
+							id={index}
+
 							/*metodo anterior con los otros protypes
 							climate={item.climate}
 							gravity={item.gravity}
