@@ -45,6 +45,8 @@ export const Vehiculos = () => {
 							title={item.name}
 							imagen="http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg"
 							contenido={dataVehiculos}
+							categoria="/vehiculos/"
+							id={index}
 							/* metodo anterior con protypes
 							model={item.model}
 							consumables={item.consumables}

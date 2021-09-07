@@ -39,10 +39,19 @@ const Layout = () => {
 						<Route exact path="/personajes">
 							<Personajes />
 						</Route>
+						<Route exact path="/personajes/:id">
+							<Personajes />
+						</Route>
 						<Route exact path="/vehiculos">
 							<Vehiculos />
 						</Route>
+						<Route exact path="/vehiculos/:id">
+							<Vehiculos />
+						</Route>
 						<Route exact path="/planetas">
+							<Planetas />
+						</Route>
+						<Route exact path="/planetas/:id">
 							<Planetas />
 						</Route>
 

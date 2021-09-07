@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext"; //traermos el  contexto
+import { Link } from "react-router-dom";
 //import { Card } from "../component/Card";
 import PropTypes from "prop-types";
 
@@ -38,9 +39,11 @@ export const Card = props => {
 						<p>{props.vehicle_class}</p>
 */}
 					</p>
-					<a href="#" className="btn btn-primary">
-						Learn More!
-					</a>
+					<button className="btn btn-primary">
+						<Link className="text-light" to={props.categoria + props.id}>
+							Learn More!
+						</Link>
+					</button>
 					<a
 						onClick={() => actions.setFavoritos(props.title)}
 						href="#"
@@ -56,7 +59,9 @@ Card.propTypes = {
 	//general
 	title: PropTypes.string,
 	imagen: PropTypes.string,
-	contenido: PropTypes.array
+	categoria: PropTypes.string,
+	contenido: PropTypes.array,
+	id: PropTypes.object
 
 	/* Anteriormente era de esta manera debido a que necesitaba solo mostraba la informacion
 	sin embargo ahora que añadi un label que cambia de acuerdo a lo necesitado no hace falta declarar todos estos
