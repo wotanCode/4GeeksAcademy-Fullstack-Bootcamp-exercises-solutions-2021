@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(44, 44, 44);
+}
+.cuerpo{
+    background-color: white;
+}
+.arribaizq{
+    display: inline-block;
+}
+.derecha{
+margin-left: 65%;
+}
+.icons{
+    font-size: 34px;
+    padding: 20px;
+    display: inline;
+}
+.icons2{
+    padding: 10px;
+    display:inline;
+    font-size: 30px;
+}
+.titulo{
+    margin: 10px 0px 0px 0px;
+    
+}
+.cuerpo{
+    margin: auto;
+    width: 600px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.imagen{
+    height: 500px;
+}
+.abajoabajo{
+    margin: 10px;
+}
