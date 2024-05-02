@@ -1,0 +1,47 @@
+body{
+    background: rgb(210, 210, 210);
+    margin: 0px;
+}
+header{
+    background: white;
+    width: 1600px;
+    margin: auto;
+    padding: 10px;
+}
+header h1{
+    width: 600px;
+    margin: auto;
+}
+#elbody{
+    width: 1600px;
+    margin: 0px auto;
+}
+#colorcentro{
+    background: white;
+    width: 600px;
+    margin: 10px auto 150px auto;
+}
+.articulos{
+    background: white;
+    /*padding: 10px 0px 10px 0px;*/
+    margin: 30px 0px 30px 0px;
+}
+.articulos h2{
+    float: left;
+    margin: 0px 0px 0px 10px;
+    padding: 10px 0px 10px 0px;
+}
+.articulos .fechas{
+    float: right;
+    color: rgb(112, 112, 112);
+    padding: 10px 0px 10px 0px;
+    margin: 0px 10px 0px 0px;
+}
+.parrafos{
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    color: black;
+    width: 580px;
+    background: white;
+}
